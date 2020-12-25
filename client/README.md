@@ -4,6 +4,8 @@
 
 based on: https://www.youtube.com/watch?v=Fa4cRMaTDUI
 
+use: http://localhost:8080/#/register
+
 ## Build Setup
 
 ``` bash
