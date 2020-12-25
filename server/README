@@ -1,0 +1,26 @@
+
+
+ESLint: 7.16.0
+
+Error: An error occurred while generating your JavaScript config file. A config file was still generated, but the config file itself may not follow your linting rules.
+Error: Failed to load plugin '@typescript-eslint' declared in 'BaseConfig': Cannot find module 'typescript'
+
+Solution:  close MS Code, delete package-lock.json and then:  npm install typescript --save
+
+===
+
+unlike video, in nodemon, you need to use escaped double quotes, not single quote.
+
+ --exec \"npm run lint && node \"",
+ 
+===
+
+.eslintrc.js needs to add: (otherwise, it fails on: const ...=require(....) 
+
+module.exports = {
+
+"rules":{
+	'@typescript-eslint/no-var-requires': 0,
+}
+
+===
